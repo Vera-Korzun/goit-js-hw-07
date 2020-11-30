@@ -1,0 +1,29 @@
+/* <!-------------------------- task-3 --------------------------> */
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.list__item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.list__item--img { 
+    width: 300px;
+}
+
+
+/* <!-------------------------- task-6 --------------------------> */
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
