@@ -1,6 +1,6 @@
 let counterValue=0;
 const getDiv=document.querySelector('#counter')
-let getSpam=document.querySelector('#value')
+let getSpan=document.querySelector('#value')
 let clickDecrement=document.querySelector('button[data-action="decrement"]')
 let clickIncrement=document.querySelector('button[data-action="increment"]')
 
