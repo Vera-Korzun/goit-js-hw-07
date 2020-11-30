@@ -10,4 +10,5 @@ const showName=function(){
     }    
 }
 
-inputElement.addEventListener('keydown',showName);
+//inputElement.addEventListener('keydown',showName);
+inputElement.addEventListener('input',showName);
