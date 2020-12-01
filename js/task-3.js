@@ -11,20 +11,14 @@ const images = [
       url:'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       alt:'Group of Horses Running',
     },
-  ];
+];
 
-  let getUl=document.querySelector('#gallery');
+const getUl = document.querySelector("#gallery");
+getUl.setAttribute('class', 'list');
 
-  const createLi=function(item){
-    getUl.insertAdjacentHTML('afterbegin', '<li><img></li>');
-    let getLi=document.querySelector('#gallery li')
-    let getImg=document.querySelector('#gallery img');
-    getImg.setAttribute('src', item.url);
-    getImg.setAttribute('alt', item.alt);
-    getUl.setAttribute('class', 'list');
-    getLi.setAttribute('class', 'list__item');
-    getImg.setAttribute('class', 'list__item--img');
-  };
-  images.forEach(createLi)
-    console.log(getUl);
-    
+const getLi = ({ url, alt }) =>
+  `<li class="list__item"><img src="${url}" alt="${alt}" width = 300 class="list__item--img"></li>`;
+const markUp = images.reduce(
+  (acc, item) => acc + getLi(item),'');
+
+getUl.insertAdjacentHTML("afterbegin", markUp);
