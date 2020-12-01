@@ -1,11 +1,10 @@
 let inputSimbols=document.getElementById('validation-input');
 const showSimbols=function(){
-    let inputContent=document.getElementById('validation-input').value;
-    let input=document.getElementById('validation-input');
-    if (inputContent.length==input.getAttribute('data-length')) {
-        input.classList.remove('invalid');
-        input.classList.add('valid');
-    } else {input.classList.remove('valid'); input.classList.add('invalid');};  
+    let inputContent=inputSimbols.value;
+    if (inputContent.length==inputSimbols.getAttribute('data-length')) {
+        inputSimbols.classList.remove('invalid');
+        inputSimbols.classList.add('valid');
+    } else {inputSimbols.classList.remove('valid'); inputSimbols.classList.add('invalid');};  
 }
 
 inputSimbols.addEventListener('focusout',showSimbols);
